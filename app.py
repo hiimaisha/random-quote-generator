@@ -55,7 +55,7 @@ st.markdown(f'<div class="quote-card"><div class="quote-mark">“</div><div clas
 st.write("")
 _,center,_=st.columns([1,2,1])
 with center:
-    if st.button("✦  Find another quote",type="primary",use_container_width=True):
+    if st.button("✦  New Quote",type="primary",use_container_width=True):
         choices=[item for item in available if item!=st.session_state.quote_current]
         st.session_state.quote_current=random.choice(choices or available); st.rerun()
     st.download_button("↓  Save quote as text",data=f'“{q[0]}” — {q[1]}',file_name="quote.txt",mime="text/plain",use_container_width=True)
